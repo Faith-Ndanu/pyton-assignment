@@ -61,15 +61,15 @@ class Account:
         monthly_interest_rate = self.interest_rate / 12
         interest_amount = self.__balance * monthly_interest_rate
         self.__balance += interest_amount
-        self.transaction_history.append(f"Interest applied: ${interest_amount}")
+        self.transaction_history.append(f"Interest applied is {interest_amount}")
         print({self.transaction_history})
 
 #(question7)Methods to freeze and unfreeze the account for security reasons.
     def freeze_account(self):
-        print("Account frozen. No further transactions allowed.")
+        print("your account has been frozen.")
 
     def unfreeze_account(self):
-        print("Account unfrozen. Transactions can resume.")
+        print("your account has been unfrozen.")
 
 #(question8)Method to retrieve the history of all transactions made on the account.
     def transaction_history(self):
@@ -87,9 +87,9 @@ class Account:
         if self.balance >= amount:
             self.balance -= amount
             recipient.balance += amount
-            print(f"Transferred ${amount} to {recipient.owner}.")
+            print(f"you have transferred {amount} to {recipient.owner}.")
         else:
-            print("Insufficient balance for transfer.")
+            print("you have insufficient balance for transfer.")
 
 
 #(question11)Method to close the account and perform necessary cleanup.        
@@ -98,4 +98,18 @@ class Account:
             self.is_open = False
             print(f"Account {self.account_number} is now closed.")
         else:
-            print("Account is already closed.")
+            print("Account is not closed.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
